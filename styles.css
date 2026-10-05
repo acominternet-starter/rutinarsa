@@ -1,0 +1,342 @@
+:root {
+  --bg-color: #121214;
+  --card-bg: #1e1e24;
+  --accent-color: #00e676;
+  --core-color: #00b0ff;
+  --text-main: #f0f0f5;
+  --text-muted: #a0a0b0;
+  --border-color: #2a2a35;
+  --warning-color: #ff5252;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  padding-bottom: 100px;
+}
+
+.app-header {
+  padding: 16px;
+  background: #18181c;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+.app-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.info-banner {
+  padding: 10px 16px;
+}
+
+.info-card {
+  background: #18181c;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info-toggle {
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.info-content {
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.info-content p {
+  margin-bottom: 8px;
+}
+
+.tabs-nav {
+  display: flex;
+  background: #18181c;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px 8px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.container {
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.session-header h2 {
+  font-size: 1.1rem;
+}
+
+.duration {
+  font-size: 0.8rem;
+  background: #2a2a35;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+  margin: 16px 0 10px 0;
+  font-weight: bold;
+}
+
+.core-title {
+  color: var(--core-color);
+}
+
+.exercise-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.core-card {
+  border-left: 4px solid var(--core-color);
+}
+
+.ex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ex-header h3 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.badge {
+  background: #2a2a35;
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.details-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.ex-details {
+  background: #141418;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.ex-details p {
+  margin-bottom: 6px;
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.tracker {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* MODIFICACIÓN: Control de ancho y ajuste anti-scroll lateral */
+.inputs {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.inputs .input-weight {
+  width: 75px;
+  flex: 0 0 75px;
+  min-width: 0;
+}
+
+.inputs .input-reps {
+  flex: 1;
+  min-width: 0;
+}
+
+.inputs input {
+  background: #121214;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+.series-checks {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-check {
+  flex: 1;
+  padding: 8px 4px;
+  background: #2a2a35;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-check.done {
+  background: var(--accent-color);
+  color: #000;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* MODIFICACIÓN: Barra de temporizador más alta, elevada y compacta */
+.timer-bar {
+  position: fixed;
+  bottom: 60px;
+  left: 16px;
+  right: 16px;
+  max-width: 568px;
+  margin: 0 auto;
+  background: var(--accent-color);
+  color: #000;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.timer-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.timer-info button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.timer-info button:active {
+  opacity: 0.8;
+}
+
+/* Estilo para las imágenes/GIFs de los ejercicios */
+.ex-image {
+  width: 100%;
+  max-width: 280px;            /* Evita que ocupe demasiado espacio vertical en pantallas grandes */
+  height: auto;
+  display: block;
+  margin: 0 auto 12px auto;    /* Centrada y con margen inferior */
+  border-radius: 8px;
+  background-color: #ffffff;   /* Fondo blanco por si la imagen tiene transparencias */
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* Quitar los puntos/viñetas y la sangría en todas las listas de las tarjetas */
+.ex-details ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 8px 0 12px 0;
+}
+
+.ex-details li {
+  list-style: none !important;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* Formato específico para la lista de errores */
+.ex-details ul.warning {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.ex-details ul.warning li {
+  color: #ff4d4d; /* Mantiene el color rojo para los errores */
+  list-style: none !important;
+}
